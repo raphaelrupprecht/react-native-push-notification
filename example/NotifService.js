@@ -183,7 +183,7 @@ export default class NotifService {
 
     for(var i=1; i < max+1; i++){
       let date = currDate.clone().hour(currHour).toDate();
-      console.log('Schedule msg '+i+' on '+date.toISOString(true));
+      console.log('Schedule msg '+i+' on '+moment(date).toISOString(true));
       this.scheduleNotif(null, date, "("+i+") Message");
       if(i%3 === 0){
         currDate.add(1, 'd');
