@@ -126,6 +126,13 @@ export default class App extends Component {
           }}>
           <Text>popInitialNotification</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+            style={styles.button}
+            onPress={() => {
+              this.notif.scheduleNotifMultiple();
+            }}>
+          <Text>scheduleNotifMultiple</Text>
+        </TouchableOpacity>
 
         <View style={styles.spacer}></View>
 

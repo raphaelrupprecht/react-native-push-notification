@@ -31,7 +31,7 @@ class NotificationHandler {
   onRegistrationError(err) {
     console.log(err);
   }
-  
+
   attachRegister(handler) {
     this._onRegister = handler;
   }
@@ -72,7 +72,8 @@ PushNotification.configure({
    * - Specified if permissions (ios) and token (android and ios) will requested or not,
    * - if not, you must call PushNotificationsHandler.requestPermissions() later
    */
-  requestPermissions: true,
+  // OHNE ÄNDERUNG IN FALSE KANN ICH DIESES PROJEKT NICHT TESTEN!!! NICHT FÜR LOCAL NOTIFICATIONS AUSGELEGT
+  requestPermissions: false,
 });
 
 export default handler;

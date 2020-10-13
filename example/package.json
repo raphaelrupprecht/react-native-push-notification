@@ -4,6 +4,14 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "android-uninstall-clear-cache": "adb uninstall com.example",
+    "DOZE-mode: force the system into idle mode": "adb shell dumpsys deviceidle force-idle",
+    "DOZE-mode: exit idle mode": "adb shell dumpsys deviceidle unforce",
+    "DOZE-mode: reactivate the device": "adb shell dumpsys battery reset",
+    "STANDBY-mode: force app into App Standby mode step 1": "adb shell dumpsys battery unplug",
+    "STANDBY-mode: force app into App Standby mode step 2": "adb shell am set-inactive com.example true",
+    "STANDBY-mode: wakeup simulation step 1": "adb shell am set-inactive com.example false",
+    "STANDBY-mode: wakeup simulation step 2": "adb shell am get-inactive com.example",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
@@ -14,7 +22,8 @@
     "@react-native-community/push-notification-ios": "^1.4.0",
     "react": "16.11.0",
     "react-native": "0.62.2",
-    "react-native-push-notification": "zo0r/react-native-push-notification#dev"
+    "react-native-push-notification": "zo0r/react-native-push-notification#dev",
+    "moment": "^2.29.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
